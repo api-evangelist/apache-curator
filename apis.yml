@@ -1,0 +1,34 @@
+aid: apache-curator
+name: Apache Curator
+description: >-
+  Apache Curator is a Java/JVM client library for Apache ZooKeeper that includes a high-level API framework and utilities to make using ZooKeeper much easier and more reliable. It provides recipes for common distributed coordination patterns.
+type: Index
+position: Consumer
+access: 3rd-Party
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - ZooKeeper
+  - Distributed Coordination
+  - Java
+  - Service Discovery
+created: '2026-03-16'
+modified: '2026-03-16'
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/apache-curator/refs/heads/main/apis.yml
+specificationVersion: '0.19'
+apis:
+  - aid: apache-curator:apache-curator
+    name: Apache Curator
+    description: >-
+      Curator provides a high-level Java API with fluent builders for ZooKeeper operations, along with pre-built recipes for leader election, distributed locks, barriers, caches, counters, and service discovery.
+    humanURL: https://curator.apache.org/docs/about
+    tags:
+      - Java
+      - ZooKeeper
+      - Distributed Systems
+    properties:
+      - type: Documentation
+        url: https://curator.apache.org/docs/about
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com
