@@ -7,10 +7,10 @@ position: Consumer
 access: 3rd-Party
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - ZooKeeper
   - Distributed Coordination
   - Java
   - Service Discovery
+  - ZooKeeper
 created: '2026-03-16'
 modified: '2026-03-16'
 url: >-
@@ -23,9 +23,9 @@ apis:
       Curator provides a high-level Java API with fluent builders for ZooKeeper operations, along with pre-built recipes for leader election, distributed locks, barriers, caches, counters, and service discovery.
     humanURL: https://curator.apache.org/docs/about
     tags:
+      - Distributed Systems
       - Java
       - ZooKeeper
-      - Distributed Systems
     properties:
       - type: Documentation
         url: https://curator.apache.org/docs/about
