@@ -1,0 +1,11 @@
+{
+  "id": "abc123-def456",
+  "name": "payment-service",
+  "address": "10.1.2.3",
+  "port": 8080,
+  "sslPort": 8443,
+  "registrationTimeUTC": 1718153645993,
+  "serviceType": "DYNAMIC",
+  "enabled": true,
+  "payload": {}
+}

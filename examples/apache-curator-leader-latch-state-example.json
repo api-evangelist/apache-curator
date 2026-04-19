@@ -1,0 +1,12 @@
+{
+  "id": "node-01",
+  "isLeader": true,
+  "state": "STARTED",
+  "path": "/services/leader",
+  "participants": [
+    {
+      "id": "node-01",
+      "isLeader": true
+    }
+  ]
+}

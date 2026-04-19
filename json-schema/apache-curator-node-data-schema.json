@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-curator/refs/heads/main/json-schema/apache-curator-node-data-schema.json",
+  "title": "NodeData",
+  "description": "Data associated with a ZooKeeper node managed by Apache Curator, including its path, data payload, and stat metadata.",
+  "type": "object",
+  "properties": {
+    "path": {
+      "type": "string",
+      "description": "Full ZooKeeper path of this node.",
+      "example": "/config/app/timeout"
+    },
+    "data": {
+      "type": "string",
+      "description": "Node data as a Base64-encoded string or UTF-8 text.",
+      "example": "30000"
+    },
+    "stat": {
+      "type": "object",
+      "description": "ZooKeeper Stat object with node metadata.",
+      "properties": {
+        "czxid": {
+          "type": "integer",
+          "description": "Transaction ID that created this node.",
+          "example": 1000
+        },
+        "mzxid": {
+          "type": "integer",
+          "description": "Transaction ID of the last modification.",
+          "example": 1050
+        },
+        "ctime": {
+          "type": "integer",
+          "description": "Creation time in milliseconds since epoch.",
+          "example": 1718153645993
+        },
+        "mtime": {
+          "type": "integer",
+          "description": "Last modification time in milliseconds since epoch.",
+          "example": 1718160000000
+        },
+        "version": {
+          "type": "integer",
+          "description": "Number of changes to this node data.",
+          "example": 2
+        },
+        "cversion": {
+          "type": "integer",
+          "description": "Number of changes to the children of this node.",
+          "example": 0
+        },
+        "aversion": {
+          "type": "integer",
+          "description": "Number of changes to the ACL of this node.",
+          "example": 0
+        },
+        "numChildren": {
+          "type": "integer",
+          "description": "Number of child nodes.",
+          "example": 0
+        },
+        "dataLength": {
+          "type": "integer",
+          "description": "Length of the data field in bytes.",
+          "example": 5
+        },
+        "ephemeralOwner": {
+          "type": "integer",
+          "description": "Session ID of the owner if ephemeral, 0 otherwise.",
+          "example": 0
+        }
+      }
+    }
+  },
+  "required": [
+    "path"
+  ]
+}

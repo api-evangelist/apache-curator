@@ -1,0 +1,6 @@
+{
+  "path": "/locks/resource-a",
+  "acquired": true,
+  "threadCount": 1,
+  "lockPath": "/locks/resource-a/_c_abc123-lock-0000000001"
+}

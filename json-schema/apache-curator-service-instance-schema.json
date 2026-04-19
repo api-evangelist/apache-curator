@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-curator/refs/heads/main/json-schema/apache-curator-service-instance-schema.json",
+  "title": "ServiceInstance",
+  "description": "A service instance registered in ZooKeeper via Apache Curator service discovery.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for this service instance.",
+      "example": "abc123-def456"
+    },
+    "name": {
+      "type": "string",
+      "description": "Service name used to group instances.",
+      "example": "payment-service"
+    },
+    "address": {
+      "type": "string",
+      "description": "Host address where this service is running.",
+      "example": "10.1.2.3"
+    },
+    "port": {
+      "type": "integer",
+      "description": "Port number this service is listening on.",
+      "example": 8080
+    },
+    "sslPort": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "SSL port if the service supports HTTPS.",
+      "example": 8443
+    },
+    "registrationTimeUTC": {
+      "type": "integer",
+      "description": "UTC timestamp (milliseconds) when this instance was registered.",
+      "example": 1718153645993
+    },
+    "serviceType": {
+      "type": "string",
+      "description": "Service lifecycle type.",
+      "enum": [
+        "DYNAMIC",
+        "STATIC",
+        "PERMANENT"
+      ],
+      "example": "DYNAMIC"
+    },
+    "enabled": {
+      "type": "boolean",
+      "description": "Whether this service instance is currently enabled for discovery.",
+      "example": true
+    },
+    "payload": {
+      "type": "object",
+      "description": "Optional user-defined payload data attached to this service instance."
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "serviceType"
+  ]
+}

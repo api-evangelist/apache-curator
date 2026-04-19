@@ -1,0 +1,16 @@
+{
+  "path": "/config/app/timeout",
+  "data": "30000",
+  "stat": {
+    "czxid": 1000,
+    "mzxid": 1050,
+    "ctime": 1718153645993,
+    "mtime": 1718160000000,
+    "version": 2,
+    "cversion": 0,
+    "aversion": 0,
+    "numChildren": 0,
+    "dataLength": 5,
+    "ephemeralOwner": 0
+  }
+}

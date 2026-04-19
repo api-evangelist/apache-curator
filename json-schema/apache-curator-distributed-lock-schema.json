@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-curator/refs/heads/main/json-schema/apache-curator-distributed-lock-schema.json",
+  "title": "DistributedLock",
+  "description": "Configuration and state for an Apache Curator InterProcessMutex distributed lock.",
+  "type": "object",
+  "properties": {
+    "path": {
+      "type": "string",
+      "description": "ZooKeeper path used as the lock node.",
+      "example": "/locks/resource-a"
+    },
+    "acquired": {
+      "type": "boolean",
+      "description": "Whether the lock is currently acquired by this process.",
+      "example": true
+    },
+    "threadCount": {
+      "type": "integer",
+      "description": "Number of times the current thread holds the lock (reentrant count).",
+      "minimum": 0,
+      "example": 1
+    },
+    "lockPath": {
+      "type": "string",
+      "description": "Actual ZooKeeper ephemeral node path created for this lock acquisition.",
+      "example": "/locks/resource-a/_c_abc123-lock-0000000001"
+    }
+  }
+}

@@ -1,0 +1,195 @@
+vocabulary: 1.0.0
+info:
+  provider: Apache Curator
+  description: Vocabulary for Apache Curator, the Java ZooKeeper client library for distributed coordination.
+  created: '2026-04-19'
+  modified: '2026-04-19'
+operational:
+  apis:
+  - namespace: curator-framework
+    version: 5.x
+    baseUrl: https://mvnrepository.com/artifact/org.apache.curator/curator-framework
+    status: active
+    description: High-level ZooKeeper client with fluent builders
+  - namespace: curator-recipes
+    version: 5.x
+    baseUrl: https://mvnrepository.com/artifact/org.apache.curator/curator-recipes
+    status: active
+    description: Distributed coordination recipe implementations
+  - namespace: curator-x-discovery
+    version: 5.x
+    baseUrl: https://mvnrepository.com/artifact/org.apache.curator/curator-x-discovery
+    status: active
+    description: Service discovery via ZooKeeper
+  resources:
+  - name: leader-election
+    description: Leader election across a distributed cluster
+    actions:
+    - elect
+    - step-down
+    - check-leader
+    - list-participants
+    apis:
+    - curator-recipes
+  - name: distributed-lock
+    description: Distributed mutex locks across JVMs
+    actions:
+    - acquire
+    - release
+    - try-acquire
+    apis:
+    - curator-recipes
+  - name: node
+    description: ZooKeeper node management
+    actions:
+    - create
+    - get
+    - set
+    - delete
+    - check-exists
+    - list-children
+    apis:
+    - curator-framework
+  - name: cache
+    description: Local replica of ZooKeeper node data
+    actions:
+    - start
+    - stop
+    - get-current-data
+    - add-listener
+    apis:
+    - curator-recipes
+  - name: service-instance
+    description: Service discovery registration entry
+    actions:
+    - register
+    - unregister
+    - query-by-name
+    - query-for-instances
+    apis:
+    - curator-x-discovery
+  - name: distributed-counter
+    description: Shared atomic counter
+    actions:
+    - increment
+    - decrement
+    - get-current
+    - set-value
+    apis:
+    - curator-recipes
+  - name: barrier
+    description: Process synchronization barrier
+    actions:
+    - set-on-zk
+    - wait-on-barrier
+    - remove-from-zk
+    apis:
+    - curator-recipes
+  - name: queue
+    description: Distributed FIFO/priority queue
+    actions:
+    - put
+    - take
+    - flush
+    - get-size
+    apis:
+    - curator-recipes
+  actions:
+  - name: acquire
+    description: Acquire a distributed lock or semaphore permit
+    pattern: write
+  - name: release
+    description: Release a held lock or semaphore permit
+    pattern: write
+  - name: elect
+    description: Participate in or trigger leader election
+    pattern: write
+  - name: register
+    description: Register a service instance for discovery
+    pattern: write
+  - name: query
+    description: Look up registered service instances
+    pattern: read
+  - name: watch
+    description: Subscribe to ZooKeeper node change events
+    pattern: read
+  - name: create
+    description: Create a ZooKeeper node
+    pattern: write
+  - name: delete
+    description: Delete a ZooKeeper node
+    pattern: destructive
+  schemas:
+    service-discovery:
+    - ServiceInstance
+    leader-election:
+    - LeaderLatchState
+    locking:
+    - DistributedLock
+    nodes:
+    - NodeData
+  enums:
+    serviceType:
+    - DYNAMIC
+    - STATIC
+    - PERMANENT
+    leaderLatchState:
+    - LATENT
+    - STARTED
+    - CLOSED
+    createMode:
+    - PERSISTENT
+    - EPHEMERAL
+    - PERSISTENT_SEQUENTIAL
+    - EPHEMERAL_SEQUENTIAL
+  authentication:
+    schemes:
+    - ZooKeeper ACLs (digest, auth, host, ip, world)
+capability:
+  workflows: []
+  personas:
+  - id: distributed-systems-engineer
+    name: Distributed Systems Engineer
+    description: Designs and implements distributed coordination logic using Curator recipes
+  - id: java-developer
+    name: Java Developer
+    description: Uses Curator to interact with ZooKeeper for configuration and coordination in Java applications
+  - id: platform-engineer
+    name: Platform Engineer
+    description: Operates and maintains ZooKeeper clusters and Curator-based coordination infrastructure
+  domains:
+  - name: Distributed Coordination
+    description: Leader election, locks, barriers, and counters for coordinating distributed processes
+  - name: Service Discovery
+    description: Registering and discovering microservices via ZooKeeper
+  - name: Configuration Management
+    description: Storing and watching shared configuration across a cluster
+  namespaces: []
+  binds: []
+crossReference:
+- resource: leader-election
+  operations:
+  - elect
+  - step-down
+  - check-leader
+  workflows: []
+  personas:
+  - distributed-systems-engineer
+- resource: distributed-lock
+  operations:
+  - acquire
+  - release
+  - try-acquire
+  workflows: []
+  personas:
+  - java-developer
+  - distributed-systems-engineer
+- resource: service-instance
+  operations:
+  - register
+  - unregister
+  - query-by-name
+  workflows: []
+  personas:
+  - java-developer
+  - platform-engineer

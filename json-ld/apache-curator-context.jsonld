@@ -1,0 +1,122 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "curator": "https://curator.apache.org/schema/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "LeaderLatchState": "curator:LeaderLatchState",
+    "ServiceInstance": "curator:ServiceInstance",
+    "NodeData": "curator:NodeData",
+    "DistributedLock": "curator:DistributedLock",
+    "acquired": {
+      "@id": "curator:acquired",
+      "@type": "xsd:boolean"
+    },
+    "address": {
+      "@id": "curator:address",
+      "@type": "xsd:string"
+    },
+    "aversion": {
+      "@id": "curator:aversion",
+      "@type": "xsd:integer"
+    },
+    "ctime": {
+      "@id": "curator:ctime",
+      "@type": "xsd:integer"
+    },
+    "cversion": {
+      "@id": "curator:cversion",
+      "@type": "xsd:integer"
+    },
+    "czxid": {
+      "@id": "curator:czxid",
+      "@type": "xsd:integer"
+    },
+    "data": {
+      "@id": "curator:data",
+      "@type": "xsd:string"
+    },
+    "dataLength": {
+      "@id": "curator:dataLength",
+      "@type": "xsd:integer"
+    },
+    "enabled": {
+      "@id": "curator:enabled",
+      "@type": "xsd:boolean"
+    },
+    "ephemeralOwner": {
+      "@id": "curator:ephemeralOwner",
+      "@type": "xsd:integer"
+    },
+    "id": {
+      "@id": "curator:id",
+      "@type": "xsd:string"
+    },
+    "isLeader": {
+      "@id": "curator:isLeader",
+      "@type": "xsd:boolean"
+    },
+    "lockPath": {
+      "@id": "curator:lockPath",
+      "@type": "xsd:string"
+    },
+    "mtime": {
+      "@id": "curator:mtime",
+      "@type": "xsd:integer"
+    },
+    "mzxid": {
+      "@id": "curator:mzxid",
+      "@type": "xsd:integer"
+    },
+    "name": "schema:name",
+    "numChildren": {
+      "@id": "curator:numChildren",
+      "@type": "xsd:integer"
+    },
+    "participants": {
+      "@id": "curator:participants",
+      "@container": "@set",
+      "@type": "@id"
+    },
+    "path": {
+      "@id": "curator:path",
+      "@type": "xsd:string"
+    },
+    "payload": {
+      "@id": "curator:payload",
+      "@type": "@id"
+    },
+    "port": {
+      "@id": "curator:port",
+      "@type": "xsd:integer"
+    },
+    "registrationTimeUTC": {
+      "@id": "curator:registrationTimeUTC",
+      "@type": "xsd:integer"
+    },
+    "serviceType": {
+      "@id": "curator:serviceType",
+      "@type": "xsd:string"
+    },
+    "sslPort": {
+      "@id": "curator:sslPort",
+      "@type": "xsd:integer"
+    },
+    "stat": {
+      "@id": "curator:stat",
+      "@type": "@id"
+    },
+    "state": {
+      "@id": "curator:state",
+      "@type": "xsd:string"
+    },
+    "threadCount": {
+      "@id": "curator:threadCount",
+      "@type": "xsd:integer"
+    },
+    "version": {
+      "@id": "curator:version",
+      "@type": "xsd:integer"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-curator/refs/heads/main/json-structure/apache-curator-leader-latch-state-structure.json",
+  "name": "LeaderLatchState",
+  "description": "State of a LeaderLatch participant in Apache Curator leader election.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Participant ID used in the leader election.",
+      "example": "node-01"
+    },
+    "isLeader": {
+      "type": "boolean",
+      "description": "Whether this participant is currently the leader.",
+      "example": true
+    },
+    "state": {
+      "type": "string",
+      "description": "LeaderLatch lifecycle state.",
+      "enum": [
+        "LATENT",
+        "STARTED",
+        "CLOSED"
+      ],
+      "example": "STARTED"
+    },
+    "path": {
+      "type": "string",
+      "description": "ZooKeeper path used for leader election.",
+      "example": "/services/leader"
+    },
+    "participants": {
+      "type": "array",
+      "description": "All participants in the election.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "node-01"
+          },
+          "isLeader": {
+            "type": "boolean",
+            "example": true
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "state"
+  ]
+}
