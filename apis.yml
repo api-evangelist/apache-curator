@@ -47,16 +47,16 @@ apis:
     url: https://curator.apache.org/docs/getting-started
   - type: GitHubRepository
     url: https://github.com/apache/curator
-  - type: SDK
+  - type: SDKs
     url: https://mvnrepository.com/artifact/org.apache.curator/curator-framework
     title: curator-framework (Maven)
-  - type: SDK
+  - type: SDKs
     url: https://mvnrepository.com/artifact/org.apache.curator/curator-recipes
     title: curator-recipes (Maven)
-  - type: SDK
+  - type: SDKs
     url: https://mvnrepository.com/artifact/org.apache.curator/curator-x-discovery
     title: curator-x-discovery (Maven)
-  - type: SDK
+  - type: SDKs
     url: https://mvnrepository.com/artifact/org.apache.curator/curator-async
     title: curator-async (Maven)
   - type: Tools
@@ -84,13 +84,13 @@ apis:
     url: https://raw.githubusercontent.com/api-evangelist/apache-curator/refs/heads/main/json-structure/apache-curator-service-instance-structure.json
   - type: JSONLD
     url: https://raw.githubusercontent.com/api-evangelist/apache-curator/refs/heads/main/json-ld/apache-curator-context.jsonld
-  - type: Example
+  - type: Examples
     url: https://raw.githubusercontent.com/api-evangelist/apache-curator/refs/heads/main/examples/apache-curator-distributed-lock-example.json
-  - type: Example
+  - type: Examples
     url: https://raw.githubusercontent.com/api-evangelist/apache-curator/refs/heads/main/examples/apache-curator-leader-latch-state-example.json
-  - type: Example
+  - type: Examples
     url: https://raw.githubusercontent.com/api-evangelist/apache-curator/refs/heads/main/examples/apache-curator-node-data-example.json
-  - type: Example
+  - type: Examples
     url: https://raw.githubusercontent.com/api-evangelist/apache-curator/refs/heads/main/examples/apache-curator-service-instance-example.json
 maintainers:
 - FN: Kin Lane
