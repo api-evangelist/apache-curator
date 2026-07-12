@@ -96,6 +96,10 @@ maintainers:
 - FN: Kin Lane
   email: info@apievangelist.com
 common:
+- type: VulnerabilityDisclosure
+  url: security/apache-curator-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/apache-curator-domain-security.yml
 - type: Portal
   url: https://curator.apache.org/
 - type: Documentation
