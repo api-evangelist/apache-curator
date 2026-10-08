@@ -133,6 +133,12 @@ maintainers:
 - FN: Kin Lane
   email: info@apievangelist.com
 common:
+- type: Plans
+  url: plans/apache-curator-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/apache-curator-rate-limits.yml
+- type: FinOps
+  url: finops/apache-curator-finops.yml
 - type: IssueTracker
   url: https://github.com/apache/curator/issues
 - type: Releases
